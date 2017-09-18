@@ -55,7 +55,6 @@
 
 \section*{Abstract} %max 200 words
 
-
 Populations can persist in directionally changing environments by evolving. Quantitative genetic theory aims to predict critical rates of environmental change beyond which populations go extinct. Here we point out that all current predictions effectively assume the same specific fitness function. This function causes selection on the standing genetic variance of quantitative traits to become increasingly strong as mean trait values depart from their optima. Hence, there is no bound on the rate of evolution and persistence is determined by the critical rate of environmental change at which populations cease to grow. We then show that biologically-reasonable changes to the underlying fitness function can impose a qualitatively different extinction threshold. In particular, inflection points caused by weakening selection create local extrema in the strength of selection and thus in the rate of evolution. These extrema can produce evolutionary tipping points, where long-run population growth rates drop from positive to negative values without ever crossing zero. Generic early-warning signs of tipping points are found to have little power to detect imminent extinction, and require hard-to-gather data. Furthermore, we show how evolutionary tipping points produce evolutionary hysteresis, creating extinction debts. 
 
 %3-6 keywords
@@ -66,8 +65,7 @@ Populations can persist in directionally changing environments by evolving. Quan
 
 Many populations currently face gradual directional changes in their environment \citep[reviewed in][]{Davis2005,Parmesan2006,Visser2008,Lavergne2010,Hoffmann2011}.
 Those populations with limited dispersal and plasticity can persist only if they evolve fast enough \citep{Lynch1993}.
-The maximum rate of environmental change a population can adaptively track -- and demographically tolerate -- %is dubbed the `critical rate of environmental change' \citep{Lynch1991}. The critical rate of environmental change 
-has recently received considerable theoretical attention \citep[reviewed in][]{Walters2012,Kopp2013,Alexander2014}. 
+The maximum rate of environmental change a population can adaptively track -- and demographically tolerate -- has recently received considerable theoretical attention \citep[reviewed in][]{Walters2012,Kopp2013,Alexander2014}. 
 
 Typically these studies follow a quantitative genetic approach \citep[for alternatives see][]{Johansson2008,Bertram2016,Osmond2017}.
 They first assume some unimodal mapping from phenotype to absolute fitness (the `fitness function').
@@ -82,8 +80,8 @@ These are equivalent given $\log(W)=r$ \citep[][Chapter 1]{Crow1970} and have pr
 This particular fitness function is therefore a relatively mild assumption under the historical paradigm of weak selection, but it becomes a strong yet biologically arbitrary assumption when environments change quickly enough that populations find themselves considerably maladapted.
 
 The rate of evolution in a mean trait value can be approximated by the product of additive genetic variance and the selection gradient \citep[][]{Lande1976}.
-With overlapping generations in continuous time, the selection gradient is the derivative of mean fitness with respect to mean trait value \citep[][equation 11]{Lande1982b}, while with non-overlapping generations in discrete time, it is the derivative of the logarithm of mean fitness \citep[][equation 7]{Lande1976}. 
-Thus the strength of selection becomes a linear function of mean phenotypic lag in all models listed above.  
+With overlapping generations in continuous time, the selection gradient is the derivative of mean fitness with respect to mean trait value \citep[][equation 11]{Lande1982b}, while with non-overlapping generations in discrete time, it is the derivative of the logarithm of mean fitness \citep[][equation 7]{Lande1976}.
+Thus the strength of selection becomes a linear function of mean phenotypic lag in all models listed above. 
 This implies that the strength of selection has no limit and therefore that, given a large enough steady-state lag, evolution can proceed arbitrarily fast (as long as additive genetic variance remains non-zero).
 Population persistence is then only determined by the population mean growth rate at the steady-state lag that causes evolution to proceed as fast as the environment changes, i.e., there is a critical rate of environmental change at which populations cease to grow.
 
@@ -148,7 +146,7 @@ We can therefore solve for the rate of environmental change, $k$, that makes the
 
 \subsection*{An alternative fitness function}
 
-Here we alter the assumption that fitness declines increasingly fast as trait values depart from the optimum. 
+Here we alter the assumption that fitness declines increasingly fast as trait values depart from the optimum.
 Instead, we depict a scenario where, far from the optimum, small departures from the optimum have smaller and smaller fitness consequences.
 This could result from selection becoming weaker with increasing maladaptation \citep[for which there is some evidence;][]{Agrawal2010}, which in turn could be caused by a lower bound on fitness (i.e., there is some maximum rate at which a population can decline).
 For example, when selection acts only through birth rate, which cannot be negative, while death rate ($m>0$) is fixed, Malthusian fitness is bounded below by $-m$.
@@ -198,7 +196,7 @@ Simulations continue until the population goes extinct or the maximum number of 
 \subsubsection*{Comparing the dynamics arising from traditional and alternative fitness functions}
 
 Figure \ref{ModerateSummaryLast} shows the effect of the rate of environmental change on evolution and persistence with the traditional (A-E) and alternative fitness functions (F-J).
-Panels A-C and F-H show that our analytical predictions (broken lines; discrete time analysis in the supplementary online material) for steady-state lag, equilibrium additive genetic variance, and population mean growth rate perform fairly well for those populations that persist (black circles).
+Panels A-C and F-H show that our analytical predictions (broken curves; discrete time analysis in the supplementary online material) for steady-state lag, equilibrium additive genetic variance, and population mean growth rate perform fairly well for those populations that persist (black circles).
 In particular, the simulation results are intermediate between our predictions using the neutral (dotted) and stochastic-house-of-cards (dashed) approximations for the genetic variance \cite[equations 14 and 15 in][]{Burger1995}, which therefore provide reasonable bounds.
 Comparing Figure \ref{ModerateSummaryLast}B to the circles in figure 6 in \cite{Burger1995} further suggests that our simulation method is accurate.
 
@@ -214,7 +212,8 @@ This spiral is therefore reminiscent of ``mutational meltdown" \citep{Lynch1990}
 The extinction spiral observed here, in a changing environment, additionally involves the loss of genetic variance due to genetic drift (including a reduced probability of maintaining beneficial alleles) and a deterministic decrease in the rate of beneficial mutations ($\sim n \mu N B$ per generation when the lag is sufficiently large).
 
 With the alternative fitness function, population growth rates of surviving populations also fail to reach values near zero as the rate of environmental change increases (Figure \ref{ModerateSummaryLast}H), this time as expected form the analytical theory.
-In addition, the rate of environmental change that causes extinction is roughly what we expect the evolutionary tipping point to be given the genetic variance is intermediate between the two analytical predictions.
+Instead, growth rates suddenly drop from well above zero to the minimum, negative growth rate (dot-dashed line).
+In addition, the rate of environmental change that causes this sudden drop in growth rate is roughly what we expect the evolutionary tipping point to be given that genetic variance is intermediate between the two analytical predictions.
 
 Panels D-E and I-J further show how the transition from persistence to extinction is fairly abrupt for both fitness functions.
 Although, with these parameters, the transition might be slightly more abrupt in the presence of an evolutionary tipping point, the traditional fitness function exhibits similarly sharp transitions as carrying capacity, and thus effective population size, is increased (see supplementary material for results with a traditional fitness function and $K=1024$).
@@ -262,7 +261,7 @@ However, in the absence of a tipping point, the increase in mean lag also causes
 In sharp contrast, the evolutionary tipping point causes selection to become weaker when the mean lag is increased at generation 5000.
 The rate of evolution thus slows and the mean lag increases dramatically, causing 9/10 replicates go extinct (the mean lag of one lucky replicate does not escape the basin of attraction; dotted line in panel E).
 For these parameter values, extinction tends to occur $\approx300$ generations after the jump in the optimum, meaning that short term environmental perturbations can lead to extinctions far into the future (i.e., an extinction debt). 
-
+ 
 \section*{Discussion}
 
 %%major findings
@@ -272,6 +271,7 @@ However, because of the specific fitness functions commonly assumed in theoretic
 In particular, we have shown that when the strength of selection does not uniformly increase with maladaptation, selection itself can be the limiting factor determining the ability of a population to evolve and persist in the face of directional environmental change.
 With limiting selection, a qualitatively different persistence threshold arises, a difficult to detect evolutionary tipping point that gives rise to an extinction debt.
 This is particularly worrying given that all current quantitative genetic predictions effectively use the same specific fitness function, which assumes selection is never limiting.
+
 
 One obvious question that follows from our work is what fitness functions look like in nature.
 Much of our knowledge about the shape of empirical fitness functions comes from four main sources: selection gradient analysis \citep{Lande1983}, cubic spline analysis \citep{Schluter1988}, aster analysis \citep{Shaw2008,Shaw2010}, and mutation accumulation/reverse genetics \citep[reviewed in][]{deVisser2014}.
@@ -297,8 +297,12 @@ While it has been noticed that simulated populations tend to go extinct at rates
 Just as predicted near an evolutionary tipping point, small changes in the rate of environmental change in the traditional model can cause populations with relatively large positive growth rates to suddenly go extinct, giving little information on how to, for example, triage populations of conservation concern.
 Thus, while critical rates of environmental change estimated from simple analytical models may give us rough estimates of the conditions under which extinction or persistence will occur, the added complexities of a dynamic genetic variance and limiting selection add caution to their interpretation and use.
     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \bibliography{extracted}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section*{Figure legends}
@@ -321,6 +325,7 @@ Parameters: $r_m = \log(2)$, $\sigma_w^2 = 9$, $\sigma_e^2 = 1$, $\sigma_g^2\app
 \label{SSGrowth}
 \end{figure}
 
+
 \begin{figure}[!ht]
 \centering
 %\includegraphics[width=0.45\linewidth]{IMAGES/TradSummaryMeanLargeBurn}
@@ -330,10 +335,12 @@ Discrete-time, individual-based simulation results with traditional (\textbf{A}-
 In discrete time the traditional fitness function is $W(z) = \exp\left[ -(\theta - z)^2 / (2\sigma_w^2) \right]$ \citep[][equation 1]{Burger1995} and the alternative fitness function is $W^*(z) = \exp\left[ d(W(z) - 1)\right]$.
 ``Population growth rate" is the number of offspring surviving viability selection (before density-dependence) divided by the number of parents, minus one. 
 ``Fraction extinct" is the number of replicates that go extinct before the end of the simulation (generation 11,000).
-In \textbf{A}-\textbf{C} and \textbf{F}-\textbf{H}, circles give mean values over the last 10 recorded time points (every 100 generations) for each replicate simulation (10 for each rate of environmental change), or over all recorded time points since the burn-in if less than 10 time points since the burn-in.
+In \textbf{A}-\textbf{C} and \textbf{F}-\textbf{H}, circles give mean values over the last 10 generations for each replicate simulation, or over all generations since the burn-in if populations went extinct in less than 10 generations following the burn-in.
 Gray circles are replicates that went extinct before the end of the simulation.  
+Ten replicates are shown for each rate of environmental change.
 Broken curves in \textbf{A}-\textbf{C}, and \textbf{F}-\textbf{H} give analytic results using the stochastic-house-of-cards (dashed) and neutral (dotted) approximations for genetic variance \citep[equations 14 and 15 in][]{Burger1995}.
-Paremeters as in \cite{Burger1995}: $B = 2$, $\sigma_w^2 = 9$, $\sigma_e^2 = 1$, $K=512$, $\mu = 2\times10^{-4}$, $\alpha^2 = 0.05$, $n=50$, and $d=1$.
+The dot-dashed curve in \textbf{H} is the minimum growth rate, approached as mean lag goes to infinity.
+Parameters as in \cite{Burger1995}: $B = 2$, $\sigma_w^2 = 9$, $\sigma_e^2 = 1$, $K=512$, $\mu = 2\times10^{-4}$, $\alpha^2 = 0.05$, $n=50$, and $d=1$.
 }
 \label{ModerateSummaryLast}
 \end{figure}
@@ -368,7 +375,7 @@ Broken lines show the maximum rate of evolution using the neutral (dotted) and s
 (\textbf{G}) The ever increasing mean lag lowers the population mean growth rate, eventually reaching values below replacement (horizontal line).
 (\textbf{H}) This drop in population growth rates ultimately, some $\sim$300 generations later, results in extinction.
 The horizontal line is the maximum number of parents, $K$.
-Here the fitness functions (see Figure \ref{ModerateSummaryLast}) are multiplied by $(1-d')$, the probability that an optimally adapted individual survives viability selection.
+Here the fitness functions (see Figure \ref{ModerateSummaryLast} caption) are multiplied by $(1-d')$, the probability that an optimally adapted individual survives viability selection.
 This generalization gives more flexibility in minimum growth rate without affecting the strength of selection.
 Parameters as in Figure \ref{ModerateSummaryLast}, except $B=3$ and $d'=0.1$.
 }
