@@ -1,0 +1,56 @@
+\documentclass[12pt,letterpaper]{article} %12-point font, US letter size
+\usepackage{mathptmx} %Times new roman with math support
+\usepackage{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb} %math support
+\usepackage{setspace} %double spacing
+\usepackage{lineno} %line numbers
+
+\doublespacing
+\linenumbers
+
+\begin{document}
+
+\section*{Sufficient conditions for the existence of an evolutionary tipping point}
+
+Here we sketch out in more detail what is required for an evolutionary tipping point to exist for any continuous, real, thrice differentiable fitness function, $r(z)$, which is monotonically declining from a sufficiently positive local maxima at $z=\theta$ to a negative number as the lag between the local maxima and trait value increases, $l=\theta-z\rightarrow\infty$.
+
+Let the position of the local maxima, $\theta$, at time $t$ be $k t$. % +\epsilon_\theta$, where $\epsilon_\theta$ at any time $t$ is a random normal variable with mean 0 and variance $\sigma_\theta^2$ and is uncorrelated across time.
+Expected population mean fitness then monotonically declines from, $\mathrm{E}[\bar{r}|\bar{l}=0] = \bar{r}_m > 0$, as the expected population mean lag, $\mathrm{E}[\bar{l}] = E[\theta - \bar{z}] = k t - \bar{g}$, increases from 0. 
+Let $\bar{l}_c$ be the mean lag that causes an expected population growth rate of zero, $\mathrm{E}[\bar{r}|\bar{l}=\bar{l}_c] = 0$.
+We then have $\mathrm{E}[\bar{r}|\bar{l}] > 0\;\forall\;\bar{l}\in[0,\bar{l}_c)$ and $\mathrm{E}[\bar{r}|\bar{l}] < 0\;\forall\;\bar{l}\in(\bar{l}_c,\infty)$.
+
+As described in the main text, the expected rate of evolution given mean additive genetic value $\bar{g}$ is approximately $E\left[\frac{\mathrm{d} \bar{g}}{\mathrm{d} t} \big| \bar{g} \right]\approx \sigma_{g}^2 \frac{\mathrm{d} \bar{r}}{\mathrm{d} \bar{g}}$, where $\sigma_g^2>0$ is the additive genetic variance (a constant that is independent of $k$) and $\bar{r}$ is population mean fitness.
+A quasi-steady-state is reached when the expected rate of evolution equals the expected rate of change in the optimum, or equivalently, $\frac{\mathrm{d} \bar{r}}{\mathrm{d} \bar{l}} = -k/\sigma_{g}^2$.
+One then wants to solve this equation for the steady-state lag, $\hat{l}$, which is the mean lag at which mean fitness declines with mean lag at rate $k/\sigma_g^2$.
+
+Given that fitness, $r$, and thus mean growth rate, $\bar{r}$, has a local maxima at $\theta$, in a constant environment, $k=0$, a quasi-steady-state is achieved when the mean lag is zero, $\bar{l}=0$.
+Since the expected growth rate at this lag is positive, $\mathrm{E}[\bar{r}|\bar{l}=0] = \bar{r}_m>0$, the population can persist at this steady-state.
+We assume this is the starting point of the population.
+Because mean growth rate, $\bar{r}$, is continuous and monotonically declining as mean lag, $\bar{l}$, increases from zero, i.e., $\frac{\mathrm{d}\bar{r}}{\mathrm{d}\bar{l}}<0$ for all $\bar{l}>0$, we are guaranteed that near $\bar{l}=0$ the steady-state lag increases with $k$.
+This is because near the local maxima, $\theta$, the mean growth rate is necessarily concave down, $\frac{\mathrm{d}^2\bar{r}}{\mathrm{d}\bar{l}^2}<0$, i.e., the strength of selection, and thus the rate of evolution with constant additive genetic variance, increases with increasing mean lag near $\bar{l}=0$.
+However, as we depart from $\bar{l}=0$ the monotonicity of $\bar{r}$ is not enough to determine the sign of  $\frac{\mathrm{d}^2\bar{r}}{\mathrm{d}\bar{l}^2}$.
+Thus, the expected rate of evolution, $\sigma_g^2\frac{\mathrm{d}\bar{r}}{\mathrm{d}\bar{l}}$, can increase or decrease as mean lag increases.
+In particular, inflection points in the fitness function, which cause inflection points in mean growth rate, $\frac{\mathrm{d}^2\bar{r}}{\mathrm{d}\bar{l}^2}=0$, create local minima and maxima in the expected rate of evolution as a function of mean lag.
+
+Let $L=\{\bar{l}_1,\bar{l}_2,...,\bar{l}_n\}$ be the ordered set of mean lags at which there are local minima and maxima in the expected rate of evolution (i.e., at which there are inflection points in the fitness function, $\frac{\mathrm{d}^2 r}{\mathrm{d} \bar{l}^2}$) and let $M=\{m_1, m_2, ..., m_n\}$ be the corresponding expected rates of evolution, i.e., $\mathrm{E}[\frac{\mathrm{d} \bar{g}}{\mathrm{d} t}|\bar{l}_i] = m_i$.
+Due to the monotonicity of mean growth rate, $\bar{r}$, the first extrema, at $\bar{l}=\bar{l}_1$, must be a maximum.
+If the lag that causes this first maxima in the rate of evolution is greater than the lag that causes a mean growth rate of zero, $\bar{l}_1>\bar{l}_c$, then the expected rate of evolution is monotonically increasing as the mean lag increases from 0 to $\bar{l}_c$, and therefore the expected rate of evolution at $\bar{l}=\bar{l}_c$ is the critical rate of environmental change (i.e., the $k$ that causes $\bar{r}=0$).
+If, however, $\bar{l}_1<\bar{l}_c$, then the steady-state lag continuously increases as the rate of environmental change, $k$, increases from 0 to $m_1$, where the population can persist (given $\bar{l}_1<\bar{l}_c$), after which the steady-state lag makes a discontinuous increase.
+Technically, there is a saddle-node bifurcation at $k = m_1$.
+The size of the discontinuous increase in the steady-state lag as the rate of environmental change, $k$, increases through the first maxima in the rate of evolution, $m_1$, and the consequences for population persistence, depends on the other lags that cause extrema, $L$, and their respective rates of evolution, $M$.
+In particular, if the first local maxima is the global maxima, $m_1>m_i\;\forall\;i>1$, then there is no quasi-steady-state solution when the rate of environmental change is greater than it, $k>m_1$, and the mean lag will increases towards infinity.
+Thus the population will go extinct for any $k>m_1$ and $m_1$ is an evolutionary tipping point.
+This is the situation discussed in the main text, as our alternative fitness function only creates one extrema in the rate of evolution as a function of mean lag.
+However, if there is a maxima that is greater than the first, $m_1<m_i$ for some $i>1$, then as the rate of environmental change, $k$, increases through $m_1$ the steady-state lag increases to the next largest mean lag that produces an expected rate of evolution slightly larger than $m_1$.
+If this next largest mean lag is greater than the lag that causes a mean growth rate of zero, $\bar{l}_c$, the population is still expected to go extinct for any $k>m_1$, and $m_1$ is still an evolutionary tipping point.
+But if the next largest mean lag that produces an expected rate of evolution slightly larger than $m_1$ is less than $\bar{l}_c$, then $m_1$ is not an evolutionary tipping point and the arguments above for $\bar{l}_1$ can be repeated for $\bar{l}_3$ (the next maxima).
+I.e., if $\bar{l}_3>\bar{l}_c$ then the critical rate of change determines persistence, while if $\bar{l}_3<\bar{l}_c$ the other lags and respective evolutionary extrema determine whether $\bar{l}_3$ is an evolutionary tipping point or not. 
+
+This argument can be generalized by letting $\bar{l}_j$ be the mean lag in $[0,\bar{l}_c]$ that produces the maximum expected rate of evolution.
+If $\bar{l}_j<\bar{l}_c$ it must cause a local maximum in the rate of evolution and thus be in $L$ (with $j$ odd).
+Extinction then occurs whenever $k>m_j$.
+We then call the height of the largest local maxima in the expected rate of evolution within the persistence zone, $m_j$, an evolutionary tipping point, as a saddle-node bifurcation occurs as $k$ increases through $m_j$.
+This bifurcation causes long-run population growth rates to go from $\mathrm{E}[\bar{r}|\bar{l}=\bar{l}_j]>0$ to a negative value without ever crossing zero.  
+
+\end{document}
