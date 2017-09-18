@@ -1,5 +1,4 @@
 # EvolTippingPoint
-An evolutionary tipping point in a changing environment
 
 Repository for material to recreate Osmond MM, Klausmeier CA. An evolutionary tipping point in a changing environment. Evolution.
 
